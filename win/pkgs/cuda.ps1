@@ -25,8 +25,9 @@ Write-Host "Installing CUDA..."
 & "${DownloadDir}/${exe}" -s | Out-Null
 
 # This is to check if cuda has been installed successfully.
-dir "C:\ProgramData"
 ${Env:CUDA_PATH}=[System.Environment]::GetEnvironmentVariable("CUDA_PATH","Machine")
+dir "C:\Program Files"
+${Env:CUDA_PATH}="C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/11.1"
 
 # CUDA MSBuild integration is not working for VS BuildTools.
 # Manually install CUDA Build Customizations files into MSBuild customization folder.

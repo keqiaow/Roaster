@@ -47,7 +47,7 @@
             -DCMAKE_INSTALL_PREFIX="$INSTALL_ABS"   \
             -DINSTALL_GTEST=OFF                     \
             -DSNAPPY_BUILD_TESTS=OFF                \
-            -DSNAPPY_REQUIRE_AVX2=ON                \
+            -DSNAPPY_REQUIRE_AVX=ON                 \
             -G"Ninja"                               \
             ..
 

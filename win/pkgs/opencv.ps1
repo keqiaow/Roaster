@@ -58,8 +58,8 @@ cmake                                                                   `
     -DBUILD_opencv_world=OFF                                            `
     -DBUILD_opencv_dnn=OFF                                              `
     -DCMAKE_BUILD_TYPE=Release                                          `
-    -DCMAKE_C_FLAGS="/MP /Zi /arch:AVX2 "                               `
-    -DCMAKE_CXX_FLAGS="/EHsc /MP /Zi /arch:AVX2 "                       `
+    -DCMAKE_C_FLAGS="/MP /Zi /arch:AVX "                                `
+    -DCMAKE_CXX_FLAGS="/EHsc /MP /Zi /arch:AVX "                        `
     -DCMAKE_EXE_LINKER_FLAGS="/DEBUG:FASTLINK /LTCG:incremental"        `
     -DCMAKE_INSTALL_PREFIX="${Env:ProgramFiles}/opencv"                 `
     -DCMAKE_PDB_OUTPUT_DIRECTORY="${PWD}/pdb"                           `

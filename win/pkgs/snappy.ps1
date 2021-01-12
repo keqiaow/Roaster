@@ -48,7 +48,7 @@ cmake                                                               `
     -DCMAKE_STATIC_LINKER_FLAGS="/LTCG:incremental"                 `
     -DGTEST_ROOT="${Env:ProgramFiles}/googletest-distribution"      `
     -DINSTALL_GTEST=OFF                                             `
-    -DSNAPPY_REQUIRE_AVX2=ON                                        `
+    -DSNAPPY_REQUIRE_AVX=ON                                         `
     -G"Ninja"                                                       `
     ..
 

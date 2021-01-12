@@ -43,9 +43,9 @@ cmake                                                                   `
     -DBOOST_ROOT="${Env:ProgramFiles}/boost"                            `
     -DBUILD_SHARED_LIBS=ON                                              `
     -DCMAKE_BUILD_TYPE=Release                                          `
-    -DCMAKE_C_FLAGS="/GL /MP /Z7 /arch:AVX2 ${dep_dll}"                 `
+    -DCMAKE_C_FLAGS="/GL /MP /Z7 /arch:AVX ${dep_dll}"                  `
     -DCMAKE_CUDA_SEPARABLE_COMPILATION=ON                               `
-    -DCMAKE_CXX_FLAGS="/EHsc /GL /MP /Z7 /arch:AVX2 ${dep_dll} ${gtest_silent_warning}" `
+    -DCMAKE_CXX_FLAGS="/EHsc /GL /MP /Z7 /arch:AVX ${dep_dll} ${gtest_silent_warning}" `
     -DCMAKE_EXE_LINKER_FLAGS="/DEBUG:FASTLINK /LTCG:incremental"        `
     -DCMAKE_INSTALL_PREFIX="${Env:ProgramFiles}/Cream"                  `
     -DCMAKE_SHARED_LINKER_FLAGS="/DEBUG:FASTLINK /LTCG:incremental"     `

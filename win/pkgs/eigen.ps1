@@ -33,8 +33,8 @@ pushd build
 
 cmake                                                                   `
     -DCMAKE_BUILD_TYPE=Release                                          `
-    -DCMAKE_C_FLAGS="/GL /MP /Z7 /arch:AVX2"                            `
-    -DCMAKE_CXX_FLAGS="/EHsc /GL /MP /Z7 /arch:AVX2"                    `
+    -DCMAKE_C_FLAGS="/GL /MP /Z7 /arch:AVX"                             `
+    -DCMAKE_CXX_FLAGS="/EHsc /GL /MP /Z7 /arch:AVX"                     `
     -DCMAKE_EXE_LINKER_FLAGS="/DEBUG:FASTLINK /LTCG:incremental"        `
     -DCMAKE_INSTALL_PREFIX="${Env:ProgramFiles}/Eigen3"                 `
     -DCMAKE_SHARED_LINKER_FLAGS="/DEBUG:FASTLINK /LTCG:incremental"     `

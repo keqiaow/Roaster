@@ -58,8 +58,8 @@ cmake                                                                           
     -DBENCHMARK_ENABLE_LTO=ON                                                   `
     -DBUILD_SHARED_LIBS=OFF                                                     `
     -DBUILD_ONNX_PYTHON=OFF                                                     `
-    -DCMAKE_C_FLAGS="/MP /Zi /arch:AVX2 ${dep_dll}"                             `
-    -DCMAKE_CXX_FLAGS="/EHsc /MP /Zi /arch:AVX2 ${dep_dll}"                     `
+    -DCMAKE_C_FLAGS="/MP /Zi /arch:AVX ${dep_dll}"                              `
+    -DCMAKE_CXX_FLAGS="/EHsc /MP /Zi /arch:AVX ${dep_dll}"                      `
     -DCMAKE_EXE_LINKER_FLAGS="/DEBUG:FASTLINK /LTCG:incremental"                `
     -DCMAKE_INSTALL_PREFIX="${Env:ProgramFiles}/ONNX"                           `
     -DCMAKE_PDB_OUTPUT_DIRECTORY="${PWD}/pdb"                                   `

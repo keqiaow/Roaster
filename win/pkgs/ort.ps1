@@ -162,9 +162,9 @@ else
         -A x64                                                                          `
         -DBOOST_ROOT="${Env:ProgramFiles}/boost"                                        `
         -DBUILD_SHARED_LIBS=OFF                                                         `
-        -DCMAKE_C_FLAGS="/GL /MP /Zi /arch:AVX2"                                        `
+        -DCMAKE_C_FLAGS="/GL /MP /Zi /arch:AVX"                                         `
         -DCMAKE_CUDA_FLAGS="-gencode=arch=compute_35,code=sm_35 -gencode=arch=compute_37,code=sm_37"    `
-        -DCMAKE_CXX_FLAGS="/EHsc /GL /MP /Zi /arch:AVX2"                                `
+        -DCMAKE_CXX_FLAGS="/EHsc /GL /MP /Zi /arch:AVX"                                 `
         -DCMAKE_EXE_LINKER_FLAGS="/DEBUG:FASTLINK /LTCG:incremental"                    `
         -DCMAKE_INSTALL_PREFIX="${Env:ProgramFiles}/onnxruntime"                        `
         -DCMAKE_PDB_OUTPUT_DIRECTORY="${PWD}/pdb"                                       `

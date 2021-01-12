@@ -24,6 +24,8 @@ if (-not $(Test-Path "${DownloadDir}/${exe}"))
 Write-Host "Installing CUDA..."
 & "${DownloadDir}/${exe}" -s | Out-Null
 
+# This is to check if cuda has been installed successfully.
+dir "C:\ProgramData"
 ${Env:CUDA_PATH}=[System.Environment]::GetEnvironmentVariable("CUDA_PATH","Machine")
 
 # CUDA MSBuild integration is not working for VS BuildTools.

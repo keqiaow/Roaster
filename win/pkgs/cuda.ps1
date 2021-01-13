@@ -30,6 +30,7 @@ ${Env:CUDA_PATH}=[System.Environment]::GetEnvironmentVariable("CUDA_PATH","Machi
 dir "C:/Program Files/NVIDIA GPU Computing Toolkit"
 dir "C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/"
 dir "C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.1"
+$env:Path="$env:Path;C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.1/bin"
 ${Env:CUDA_PATH}="C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.1"
 
 # CUDA MSBuild integration is not working for VS BuildTools.

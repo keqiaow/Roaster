@@ -27,6 +27,9 @@ pushd "$root"
 
 ${Env:Path} = [System.Environment]::GetEnvironmentVariable("Path","Machine")
 
+echo ${Env:Path}
+echo ${Env:CUDA_PATH}
+
 if (${Env:CUDA_PATH} -ne $null)
 {
     $CUDA_HOME=${Env:CUDA_PATH}

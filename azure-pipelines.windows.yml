@@ -44,7 +44,6 @@ stages:
       steps:
       - powershell: |
           cmake --version
-          # nvcc -V
           python -V
 
     - job: freetype_1

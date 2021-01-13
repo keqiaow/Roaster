@@ -23,15 +23,15 @@ stages:
         parameters:
           stage_name: zlib,openssl,c-ares,curl
 
-    - job: gpu
-      dependsOn: tool
-      steps:
-      - template: azure-pipelines/build_stage.windows.yml
-        parameters:
-          stage_name: cuda,cudnn,tensorrt
+    # - job: gpu
+    #   dependsOn: tool
+    #   steps:
+    #   - template: azure-pipelines/build_stage.windows.yml
+    #     parameters:
+    #       stage_name: cuda,cudnn,tensorrt
 
     - job: mkl
-      dependsOn: gpu
+      # dependsOn: gpu
       steps:
       - template: azure-pipelines/build_stage.windows.yml
         parameters:
@@ -44,7 +44,7 @@ stages:
       steps:
       - powershell: |
           cmake --version
-          nvcc -V
+          # nvcc -V
           python -V
 
     - job: freetype_1

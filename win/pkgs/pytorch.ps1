@@ -140,7 +140,7 @@ For ($i=0; $i -lt 2; ++$i)
         -DPROTOBUF_LIBRARIES="${Env:ProgramFiles}/protobuf/bin"                     `
         -DPROTOBUF_PROTOC_EXECUTABLE="${Env:ProgramFiles}/protobuf/bin/protoc.exe"  `
         -DTORCH_CUDA_ARCH_LIST="Pascal;Volta;Turing;Ampere"                         `
-        -DUSE_CUDA=ON                                                               `
+        -DUSE_CUDA=OFF                                                              `
         -DUSE_DISTRIBUTED=OFF                                                       `
         -DUSE_GFLAGS=ON                                                             `
         -DUSE_GLOG=ON                                                               `
@@ -161,6 +161,10 @@ For ($i=0; $i -lt 2; ++$i)
         -Dglog_DIR="${Env:ProgramFiles}/google-glog/lib/cmake/glog"                 `
         -Dgtest_force_shared_crt=ON                                                 `
         -Dpybind11_INCLUDE_DIR="${Env:ProgramFiles}/pybind11/include"               `
+        -DPYTHON_INCLUDE_DIR="$(python -c "from distutils.sysconfig import get_python_inc; print(get_python_inc())")"  `
+        -DPYTHON_LIBRARY="${Env:ProgramFiles}/Python39/libs/python39.lib" `
+        -DPYTHONLIBS_VERSION_STRING="3.9" `
+        -DPYTHON_EXECUTABLE="${Env:ProgramFiles}/Python39/python.exe" `
         -G"Ninja"                                                                   `
         ..
 }

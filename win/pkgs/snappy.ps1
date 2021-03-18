@@ -34,14 +34,14 @@ pushd build
 #   - Need additional /DNOMINMAX for std::max in unit tests.
 #   - /GL doesn't work for unknown reason.
 $gtest_dll="/DGTEST_LINKED_AS_SHARED_LIBRARY=1"
+$gmock_dll="/DGTEST_CREATE_SHARED_LIBRARY=1"
 cmake                                                               `
     -DBENCHMARK_ENABLE_INSTALL=OFF                                  `
     -DBUILD_SHARED_LIBS=ON                                          `
     -DCMAKE_BUILD_TYPE=Release                                      `
-    -DCMAKE_C_FLAGS="/DNOMINMAX /MP /Zi ${gtest_dll}"               `
-    -DCMAKE_CXX_FLAGS="/DNOMINMAX /EHsc /MP /Zi ${gtest_dll}"       `
+    -DCMAKE_C_FLAGS="/DNOMINMAX /MP /Zi ${gtest_dll} ${gmock_dll} /Dgmock_build_tests=OFF /Dgtest_build_tests=OFF"  `
+    -DCMAKE_CXX_FLAGS="/DNOMINMAX /EHsc /MP /Zi ${gtest_dll} ${gmock_dll} /Dgmock_build_tests=OFF /Dgtest_build_tests=OFF"       `
     -DCMAKE_EXE_LINKER_FLAGS="/DEBUG:FASTLINK /LTCG:incremental"    `
-    -DCMAKE_WINDOWS_EXPORT_ALL_SYMBOLS=ON                           `
     -DCMAKE_INSTALL_PREFIX="${Env:ProgramFiles}/Snappy"             `
     -DCMAKE_PDB_OUTPUT_DIRECTORY="${PWD}/pdb"                       `
     -DCMAKE_SHARED_LINKER_FLAGS="/DEBUG:FASTLINK /LTCG:incremental" `
@@ -49,6 +49,8 @@ cmake                                                               `
     -DGTEST_ROOT="${Env:ProgramFiles}/googletest-distribution"      `
     -DINSTALL_GTEST=OFF                                             `
     -DSNAPPY_REQUIRE_AVX=ON                                         `
+    -DSNAPPY_BUILD_TESTS=OFF                                        `
+    -DSNAPPY_BUILD_BENCHMARKS=OFF                                   `
     -G"Ninja"                                                       `
     ..
 
@@ -64,12 +66,12 @@ if (-Not $?)
 }
 
 $ErrorActionPreference="SilentlyContinue"
-cmake --build . --target test
-if (-Not $?)
-{
-    echo "Oops! Expect to pass all tests."
-    exit 1
-}
+# cmake --build . --target test
+# if (-Not $?)
+# {
+#     echo "Oops! Expect to pass all tests."
+#     exit 1
+# }
 $ErrorActionPreference="Stop"
 
 rm -Force -Recurse -ErrorAction SilentlyContinue -WarningAction SilentlyContinue "${Env:ProgramFiles}/Snappy"

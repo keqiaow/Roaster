@@ -9,8 +9,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <Content Include="$(MSBuildThisFileDirectory)/../lib/native/lib/Release/cusolver64_10.dll">
-      <Link>cusolver64_10.dll</Link>
+    <Content Include="$(MSBuildThisFileDirectory)/../lib/native/lib/Release/cusolverMg64_10.dll">
+      <Link>cusolverMg64_10.dll</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

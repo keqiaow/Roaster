@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
-    <id>Roaster.cusolver.v141.dyn.x64</id>
+    <id>Roaster.cusolverMg.v141.dyn.x64</id>
     <version>$version$</version>
-    <title>Roaster.cusolver.v141.dyn.x64</title>
+    <title>Roaster.cusolverMg.v141.dyn.x64</title>
     <authors>NVIDIA Corporation</authors>
     <owners>Tongliang Liao</owners>
     <licenseUrl>https://docs.nvidia.com/cuda/eula/index.html</licenseUrl>
@@ -13,16 +13,12 @@
     <description>In GPU-accelerated applications, the sequential part of the workload runs on the CPU – which is optimized for single-threaded performance – while the compute intensive portion of the application runs on thousands of GPU cores in parallel. When using CUDA, developers program in popular languages such as C, C++, Fortran, Python and MATLAB and express parallelism through extensions in the form of a few basic keywords.</description>
     <releaseNotes>https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html</releaseNotes>
     <copyright>Copyright 2015-2020</copyright>
-    <tags>cuda cusolver native C++ v141 dyn</tags>
-    <dependencies>
-      <dependency id="Roaster.cusolverMg.v141.dyn.x64"   version="[$version$]" />
-    </dependencies>
   </metadata>
   <files>
-    <file src="Roaster.cusolver.v141.dyn.x64.targets"   target="build\Roaster.cusolver.v141.dyn.x64.targets" />
-    <file src="cusolver\*.txt"                          target="lib\native\lib\Release\" />
-    <file src="cusolver\bin\**\cusolver*"               target="lib\native\lib\Release\" exclude="**\cusolverMg*" />
-    <file src="cusolver\include\**\cusolver*"           target="lib\native\include" exclude="**\cusolverMg*" />
-    <file src="cusolver\lib\x64\**\cusolver*"           target="lib\native\lib\Release\" exclude="**\cusolverMg*" />
+    <file src="Roaster.cusolverMg.v141.dyn.x64.targets"   target="build\Roaster.cusolverMg.v141.dyn.x64.targets" />
+    <file src="cusolverMg\*.txt"                          target="lib\native\lib\Release\" />
+    <file src="cusolverMg\bin\**\cusolverMg*"             target="lib\native\lib\Release\" />
+    <file src="cusolverMg\include\**\cusolverMg*"         target="lib\native\include" />
+    <file src="cusolverMg\lib\x64\**\cusolverMg*"         target="lib\native\lib\Release\" />
   </files>
 </package>

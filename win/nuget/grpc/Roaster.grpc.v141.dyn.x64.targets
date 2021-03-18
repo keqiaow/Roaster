@@ -6,7 +6,7 @@
     </ClCompile>
     <Link>
       <AdditionalLibraryDirectories>$(MSBuildThisFileDirectory)/../lib/native/lib/Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>grpc.lib;grpc_plugin_support.lib;grpc_unsecure.lib;grpc++.lib;grpc++_alts.lib;grpc++_error_details.lib;grpc++_reflection.lib;grpc++_unsecure.lib;grpcpp_channelz.lib;gpr.lib;address_sorting.lib;upb.lib;ws2_32.lib;absl_bad_optional_access.lib;absl_base.lib;absl_civil_time.lib;absl_dynamic_annotations.lib;absl_int128.lib;absl_log_severity.lib;absl_raw_logging_internal.lib;absl_spinlock_wait.lib;absl_strings.lib;absl_strings_internal.lib;absl_str_format_internal.lib;absl_throw_delegate.lib;absl_time.lib;absl_time_zone.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>grpc.lib;grpc_plugin_support.lib;grpc_unsecure.lib;grpc++.lib;grpc++_alts.lib;grpc++_error_details.lib;grpc++_reflection.lib;grpc++_unsecure.lib;grpcpp_channelz.lib;gpr.lib;address_sorting.lib;re2.lib;upb.lib;ws2_32.lib;absl_bad_optional_access.lib;absl_bad_variant_access.lib;absl_base.lib;absl_civil_time.lib;absl_cord.lib;absl_debugging_internal.lib;absl_demangle_internal.lib;absl_exponential_biased.lib;absl_graphcycles_internal.lib;absl_hash.lib;absl_hashtablez_sampler.lib;absl_int128.lib;absl_log_severity.lib;absl_malloc_internal.lib;absl_raw_hash_set.lib;absl_raw_logging_internal.lib;absl_spinlock_wait.lib;absl_stacktrace.lib;absl_status.lib;absl_str_format_internal.lib;absl_strings.lib;absl_strings_internal.lib;absl_symbolize.lib;absl_synchronization.lib;absl_throw_delegate.lib;absl_time.lib;absl_time_zone.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
